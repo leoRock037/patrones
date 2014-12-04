@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+
+{% block title %}crear kpi{% endblock %}
+
+{% block content %}
+
+	<!-- ...................Contenedor Contenido General......................... -->
+
+	
+	<section class="container content">
+    	<div class="row">
+        	<section class="panel panel-default">
+  				<section class="panel-body">
+		        	<div class="col-md-12 row">
+		        		<div class="page-header">
+								<h3 class="text-center">Agregar nuevo kpi</h3>
+						</div>
+						<section>
+							<form action="{% url 'view_addKpi' %}" method="POST" role="form">
+								
+								{% csrf_token %}
+								{{ form.as_p }}
+								<input type="submit" value="Guardar">
+								<input type="reset" value="Reset">
+							</form>
+			        		      	
+				      	</section>
+					</div>
+				</section>
+			</section>
+		</div>	
+	</section>
+  		
+
+{% endblock %}
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+
+<head>
+  {% block head%}
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/site.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+    <title>{% block title %}{% endblock %} | Kpis -indicadores</title>
+  {% endblock %}
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+          <div class="col-md-push-1 col-md-10">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="">Inicio</a>
+              </div>
+
+              <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">                 
+          
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kpis<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{% url 'view_addKpi'%}">Crear nuevo Kpi</a></li>
+                  </ul>
+                </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+    </nav>
+  
+
+  <!-- ...................Contenedor Contenido General......................... -->
+
+  {% block content %}
+
+  
+
+  <!-- Espacio disponible para el contenido general de la pagina   -->
+
+
+
+  {% endblock %}
+
+
+  <script src="/static/js/jquery-1.10.2.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
+
+
+
+</body>
+</html>

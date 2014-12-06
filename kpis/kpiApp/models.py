@@ -11,4 +11,5 @@ class Kpi(models.Model):
 	responsable = models.CharField( max_length = 100 )
 	tipo 		= models.CharField( max_length = 100 )
 	metrica 	= models.CharField( max_length = 100 )
+	organizacion = models.ManyToManyField(Organizacion)
 

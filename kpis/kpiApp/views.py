@@ -18,12 +18,18 @@ def addKpi_view(request):
 			k = Kpi()
 			k.responsable 		=  responsable
 			k.tipo 	= tipo
-			k.metrica 		= metrica
+			k.metrica 		= metrica			
 			k.status = True
 			k.save() # Guardar la informacion
+			form.save_m2m()
 			info = "Se guardo satisfactoriamente!!!!!"
 		else:
 			info = "informacion con datos incorrectos"			
 	form = addKpiForm()
 	ctx = {'form':form, 'informacion':info}
 	return render_to_response('addKpi.html',ctx,context_instance=RequestContext(request))
+
+
+def about(request):
+	texto = "Proyecto de Indicadores (KPIs) -  Sergio Alexander Gutierrez - CodeTag"
+	return render (request, 'about.html', {'texto': texto})

@@ -12,6 +12,5 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
 	url( r'^api/', include( 'api.urls' ) ),
-	url(r'^addKpi/','addKpi_view',name = 'view_addKpi'),
-
+	url( r'^kpi/', include( 'kpiApp.urls' ) ),
 )

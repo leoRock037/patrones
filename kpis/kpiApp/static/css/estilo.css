@@ -1,0 +1,45 @@
+#cabecera{
+	width: 100%;
+	height: 120px;
+	max-height: 120px;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+.img{
+	width: 120px;
+	height: 120px;	
+	padding: 10px;
+}
+.der{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+
+}
+.izq{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.titulo{
+	text-align: center;
+	padding: 20px;
+}
+.pe{
+	font-size: 30px;
+}
+.me{
+	font-size: 50px;
+}
+.gr{
+	font-size: 70px;
+}
+
+
+
+
+/*Estilo boostrap*/
+.row{
+	margin-left: 2px !important;
+}

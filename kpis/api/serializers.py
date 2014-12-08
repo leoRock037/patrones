@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from kpiApp.models import Kpi
+from kpiApp.models import Organizacion
 
-class KpiSerializer( serializers.ModelSerializer ):
+class OrgSerializer( serializers.ModelSerializer ):
 	class Meta:
-		model = Kpi
-		fields = ('id','responsable','tipo','metrica','organizacion' )
+		model = Organizacion
+		fields = ( 'nombre', 'tamano', 'txt_color', 'logo_url', 'posicion', 'indicadores', 'representante')

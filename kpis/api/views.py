@@ -7,21 +7,21 @@ from rest_framework.response import Response
 
 from rest_framework.generics import (ListCreateAPIView, RetrieveUpdateDestroyAPIView )
 
-from kpiApp.models import Kpi
-from api.serializers import KpiSerializer
+from kpiApp.models import *
+from api.serializers import OrgSerializer
 
 
 @api_view(['GET', 'POST'])
-def kpi_lista(request):
+def org_lista(request):
     # GET Request
     if request.method == 'GET':
-        kpi = Kpi.objects.all()
-        serializer = KpiSerializer(kpi)
+        org = Organizacion.objects.all()
+        serializer = OrgSerializer(org)
         return Response(serializer.data)
 
     # POST Request
     if request.method == 'POST':
-        serializer = KpiSerializer(data=request.DATA)
+        serializer = OrgSerializer(data=request.DATA)
 
         if serializer.is_valid():
             serializer.save()

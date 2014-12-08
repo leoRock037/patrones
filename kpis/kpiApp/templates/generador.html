@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+{% load templatetag_handlebars %}
+  <head>
+  {% handlebars_js %}
+    <title>Indicadores</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery-1.10.2.js"></script>
+    <script src="/static/js/jquery.form.min.js"></script>
+    <script src="/static/js/handlebars.js"></script>
+    <script type="text/javascript" src="/static/js/Chart.js"></script>
+    <script type="text/javascript" src="/static/js/load.js"></script>
+    <input type="hidden" value="{{ org }}" id="id">    
+
+
+    {% tplhandlebars "template" %}
+
+    <div id="cabecera">
+      {{{Img logo_url posicion}}}
+      {{{Titulo nombre tamano}}}
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="btn-group-vertical" role="group" aria-label="...">
+          {{# each indicadores}}
+            {{Kpi this}}
+          {{/each}}
+          
+        </div>
+      </div>
+      <div class="panel panel-default col-md-9">
+        <div class="panel-body" id="tablero">
+          
+        </div>
+      </div>
+    </div>
+    <br/> 
+    {% endtplhandlebars %}
+
+
+  </head>
+  <body>
+  <div id="content">
+   
+  </div>
+ 
+  </body>
+  <script type="text/javascript">
+    
+      $('#kpiEco').click(function() {
+        alert("jajaa");
+      });
+      $('#kpiDe').click(function() {
+        alert("jojo");
+      })
+    
+  </script>
+
+</html>
+

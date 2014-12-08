@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'kpiApp',
     'api',
+    'templatetag_handlebars',
 )
 
 MIDDLEWARE_CLASSES = (

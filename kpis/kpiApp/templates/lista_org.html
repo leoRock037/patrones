@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block title %}Lista de Indicadores{% endblock %}
+
+{% block content %}
+{% load staticfiles %}
+{% for i in lista_org %}
+<p>{{i.nombre}} {{i.representante}} {{i.id}}<a href="{% url 'view_generador' i %}"><span class="glyphicon glyphicon-pencil"></span></a> </p>
+{% endfor %}
+<a href="javascript:doSaveAs()">Pulsa este enlace para guardar la pagina</a>
+{% endblock %}
+
+
+
+<script language="JavaScript">
+	var isReady = true;
+	function doSaveAs(){
+		if (document.execCommand){
+			if (isReady){document.execCommand("SaveAs");}
+			}else{
+			alert('Esta opcion solo funciona con  Internet Exlorer 4.0 o posteriores.');
+		}
+	}
+</script>

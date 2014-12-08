@@ -11,10 +11,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='kpi',
-            name='organizacion',
-            field=models.ManyToManyField(to='kpiApp.Organizacion'),
-            preserve_default=True,
+        migrations.RemoveField(
+            model_name='indicador',
+            name='tipo',
         ),
     ]

@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 
-# Function based API views
-from api.views import kpi_lista
+#Function based API views
+from api.views import org_lista
 
 # Class based API views
 #from api.views import TaskList, TaskDetail
@@ -9,5 +9,5 @@ from api.views import kpi_lista
 urlpatterns = patterns('',
 
     #Regular URLs
-	url(r'^kpi/$', kpi_lista, name='kpi_list'),
+	url(r'^org/$', org_lista, name='org_list'),
 )

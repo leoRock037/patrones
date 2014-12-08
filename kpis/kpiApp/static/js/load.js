@@ -75,6 +75,8 @@ function kpiDe(){
 		+"<hr>"
 		+"</div>"
 		+"<div id='valores'>valores <br/></div>"
+		+"<div class='col-md-6'><canvas id='canvas1' height='300' width='400'></canvas></div>"
+		+"<div class='col-md-6'><canvas id='canvas2' height='300' width='400'></canvas></div>"
 	
 	);
 }
@@ -118,7 +120,7 @@ function addKpiDe(){
 	for(var i=0; i<data.length;i++){
 		fecha = data[i].fecha;
 		vE=data[i].valorEstimado;
-		vR=data[i].svalorReal;
+		vR=data[i].valorReal;
 		labels.push(fecha);
 		dataE.push(vE);
 		dataR.push(vR);
